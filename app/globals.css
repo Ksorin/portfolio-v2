@@ -7,7 +7,7 @@ body {
 }
 
 @layer base {
-  :root{
+  :root {
     --background: 218 14% 16%;
     --foreground: 219 14% 71%;
     --muted: 218 12% 20%;
@@ -43,4 +43,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.custom-svg {
+  width: 32px !important;
+  height: 32px !important;
 }
