@@ -19,6 +19,9 @@ import {
   SiPython,
   SiVercel,
   SiFigma,
+  SiGodotengine,
+  SiLua,
+  SiRobloxstudio,
 } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { Badge } from "@/components/ui/badge";
@@ -43,6 +46,9 @@ const slugs = [
   "visualstudiocode",
   "androidstudio",
   "figma",
+  "lua",
+  "gdscript",
+  "robloxstudio",
 ] as const;
 
 const iconMap = {
@@ -62,7 +68,10 @@ const iconMap = {
   github: FaGithub,
   gitlab: FaGitlab,
   visualstudiocode: BiLogoVisualStudio,
-  // Ajoutez d'autres mappages ici si nécessaire...
+  figma: SiFigma,
+  lua: SiLua,
+  gdscript: SiGodotengine,
+  robloxstudio: SiRobloxstudio,
 } as const;
 
 // Couleurs personnalisées pour chaque icône
@@ -83,6 +92,9 @@ const iconColors = {
   github: "#181717",
   gitlab: "#fc6d26",
   visualstudiocode: "#007acc",
+  lua: "#5566ee",
+  gdscript: "#666c83",
+  robloxstudio: "#80BBDB",
 };
 
 export const Skills = () => {
