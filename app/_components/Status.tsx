@@ -7,8 +7,10 @@ import {
   PersonStanding,
   Spade,
   Utensils,
+  Hand,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Status = () => {
   return (
@@ -20,10 +22,13 @@ export const Status = () => {
             {SCHOOL_PROJECTS.map((project, index) => (
               <SchoolProjects
                 key={index}
+                id={project.id}
                 Logo={project.Logo}
                 title={project.title}
                 description={project.description}
+                descriptionLongue={project.descriptionLongue}
                 url="/"
+                video={project.video}
               />
             ))}
           </div>
@@ -35,7 +40,7 @@ export const Status = () => {
             Experiences extra-scolaires
           </p>
           <div className="flex flex-col gap-4">
-            {SIDEACTIVITIES.map((activity, index) => (
+            {SIDE_ACTIVITIES.map((activity, index) => (
               <SideActivities
                 key={index}
                 image={activity.image}
@@ -56,50 +61,71 @@ export const Status = () => {
   );
 };
 
-const SCHOOL_PROJECTS: SchoolProjectsProps[] = [
+export const SCHOOL_PROJECTS: SchoolProjectsProps[] = [
   {
+    id: "terroir-express",
     Logo: Utensils,
     title: "Terroir Express",
     description: "Description projet 1",
+    descriptionLongue: "Description longue projet 3",
     url: "/", // Add the URL of the project
+    video: "/videos/terroir-express.mp4",
   },
   {
+    id: "skyjo",
     Logo: Spade,
     title: "Skyjo",
     description: "Description projet 2",
+    descriptionLongue: "Description longue projet 3",
     url: "/", // Add the URL of the project
+    video: "/videos/skyjo.mp4",
   },
   {
+    id: "puissance-4",
     Logo: Code,
     title: "Puissance 4",
     description: "Description projet 3",
+    descriptionLongue: "Description longue projet 3",
     url: "/", // Add the URL of the project
+    video: "/videos/puisance-4.mp4",
   },
   {
+    id: "jeu-golang",
     Logo: PersonStanding,
     title: "Jeu en Golang",
     description: "Description projet 3",
+    descriptionLongue: "Description longue projet 3",
     url: "/", // Add the URL of the project
+    video: "/videos/jeu-golang.mp4",
   },
   {
+    id: "site-manucure",
+    Logo: Hand,
+    title: "Site de manucure",
+    description: "Description projet 3",
+    descriptionLongue: "Description longue projet 3",
+    url: "/", // Add the URL of the project
+    video: "/videos/site-manucure.mp4",
+  },
+  {
+    id: "jeu-golang3",
     Logo: PersonStanding,
     title: "Jeu en Golang",
     description: "Description projet 3",
+    descriptionLongue: "Description longue projet 3",
     url: "/", // Add the URL of the project
-  },
-  {
-    Logo: PersonStanding,
-    title: "Jeu en Golang",
-    description: "Description projet 3",
-    url: "/", // Add the URL of the project
+    video: "/videos/jeu-golang.mp4",
   },
 ];
 
 type SchoolProjectsProps = {
+  id: string;
   Logo: LucideIcon;
   title: string;
   description: string;
+  descriptionLongue: string;
   url: string;
+  video: string;
 };
 
 const SchoolProjects = (props: SchoolProjectsProps) => {
@@ -119,7 +145,7 @@ const SchoolProjects = (props: SchoolProjectsProps) => {
   );
 };
 
-const SIDEACTIVITIES: SideActivitiesProps[] = [
+export const SIDE_ACTIVITIES: SideActivitiesProps[] = [
   {
     image: "/images/logo_3Moulins.png",
     title: "Bouqueterie",
@@ -157,7 +183,7 @@ const SideActivities = (props: SideActivitiesProps) => {
       href={props.url}
       className="inline-flex gap-4 items-center hover:bg-accent/50 transition-colors p-1 rounded"
     >
-      <img
+      <Image
         src={props.image}
         alt={props.title}
         className="w-10 h-10 object-contain"
