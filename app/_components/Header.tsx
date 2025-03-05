@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { GithubIcon } from "./icons/GithubIcon";
 import { Section } from "./Section";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { LinkedInIcon } from "./icons/LinkedInIcon";
 

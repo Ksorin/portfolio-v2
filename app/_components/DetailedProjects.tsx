@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SCHOOL_PROJECTS, SIDE_ACTIVITIES } from "./Status";
+import { SCHOOL_PROJECTS } from "./Status";
 import {
   Dialog,
   DialogContent,

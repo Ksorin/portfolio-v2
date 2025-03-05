@@ -6,7 +6,6 @@ import {
   FaAndroid,
   FaHtml5,
   FaCss3,
-  FaNodeJs,
   FaGit,
   FaGithub,
   FaGitlab,

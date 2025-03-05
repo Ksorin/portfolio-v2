@@ -2,7 +2,6 @@ import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
 import {
   Code,
-  Contact,
   LucideIcon,
   PersonStanding,
   Spade,
