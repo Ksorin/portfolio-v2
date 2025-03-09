@@ -4,6 +4,7 @@ import { ComponentPropsWithoutRef } from "react";
 import { cn } from "@/lib/utils";
 import { ReactIcon } from "./icons/ReactIcon";
 import Link from "next/link";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
   return (
@@ -44,8 +45,13 @@ export const Hero = () => {
           <Code className="inline-flex items-center gap-1">
             <ReactIcon size={16} className="inline" />
             React
-          </Code>
-          ,
+          </Code>{" "}
+          ainsi que le framework CSS{" "}
+          <Code className="inline-flex items-center gap-1">
+            <RiTailwindCssFill size={16} className="inline" color="#80BBDB" />
+            Tailwind
+          </Code>{" "}
+          pour réaliser ce site web.
         </p>
       </div>
       <div className="flex-[2] max-md:m-auto ml-auto">
